@@ -1,4 +1,3 @@
-# Embedded-Edge-Based-Intelligent-Surveillance-System
 # Embedded Edge-Based Intelligent Surveillance System using ESP32-CAM
 
 An intelligent surveillance system developed using ESP32-CAM that performs image capture and processing directly on the device using edge computing principles. The system detects motion using a PIR sensor, captures images automatically, and sends real-time alerts through Wi-Fi, reducing cloud dependency, latency, and power consumption.
@@ -53,25 +52,6 @@ Processes data locally instead of continuously transmitting footage to cloud ser
 - ESP32 Board Package
 - ESP32-CAM Libraries
 - Embedded C/C++
-
-## System Architecture
-
-PIR Motion Sensor
-        ↓
-     ESP32-CAM
-        ↓
-   Image Capture
-        ↓
- Local Processing
- (Edge Computing)
-        ↓
-   Decision Logic
-        ↓
- ┌───────────────┐
- ↓               ↓
-LED/Buzzer   Wi-Fi Alert
-                  ↓
-                User
 
 ## Working Principle
 
