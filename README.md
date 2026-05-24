@@ -1,115 +1,122 @@
 # Embedded-Edge-Based-Intelligent-Surveillance-System
-Embedded Edge-Based Intelligent Surveillance System using ESP32-CAM
+# Embedded Edge-Based Intelligent Surveillance System using ESP32-CAM
 
-An intelligent surveillance system built using ESP32-CAM that performs image capture and basic processing directly on the device using edge computing principles. The system detects motion through a PIR sensor, captures images automatically, and sends real-time alerts via Wi-Fi, reducing cloud dependency, latency, and power consumption.
+An intelligent surveillance system developed using ESP32-CAM that performs image capture and processing directly on the device using edge computing principles. The system detects motion using a PIR sensor, captures images automatically, and sends real-time alerts through Wi-Fi, reducing cloud dependency, latency, and power consumption.
 
-📌 Project Overview
+## Project Overview
 
-Traditional surveillance systems continuously stream video data to cloud servers, resulting in higher bandwidth usage, increased latency, privacy concerns, and greater power consumption. This project addresses these challenges by implementing an edge-based surveillance system where image acquisition and processing are performed locally on the ESP32-CAM device. Alerts are generated only when significant events such as motion detection occur.
+Traditional surveillance systems continuously stream video to cloud servers, resulting in high bandwidth usage, increased latency, privacy concerns, and dependency on internet connectivity.
 
-🎯 Objectives
-Design a low-cost intelligent surveillance system using ESP32-CAM
-Detect human motion using a PIR sensor
-Capture images automatically upon motion detection
-Send images and alerts through Wi-Fi
-Implement edge computing for faster processing and reduced cloud dependency
-✨ Key Features
-Motion Detection
+This project implements an Edge-Based Intelligent Surveillance System where image acquisition and processing are performed locally on the ESP32-CAM. Alerts are generated only when motion is detected, making the system efficient, responsive, and privacy-focused.
 
+## Objectives
+
+- Design a low-cost intelligent surveillance system
+- Detect human motion using a PIR sensor
+- Capture images automatically when motion is detected
+- Send alerts and images through Wi-Fi
+- Reduce cloud dependency using edge computing
+
+## Features
+
+### Motion Detection
 Detects movement using a PIR sensor and triggers surveillance actions automatically.
 
-Automatic Image Capture
-
+### Automatic Image Capture
 Captures images instantly whenever motion is detected.
 
-Edge Computing
+### Edge Processing
+Performs image processing locally on the ESP32-CAM for faster response.
 
-Processes captured data locally on the ESP32-CAM, reducing latency and cloud dependence.
+### Real-Time Notifications
+Sends alerts and captured images to users through Wi-Fi connectivity.
 
-Real-Time Alerts
+### Wireless Monitoring
+Allows remote monitoring without wired infrastructure.
 
-Sends notifications and captured images to users through Wi-Fi connectivity.
+### Enhanced Privacy
+Processes data locally instead of continuously transmitting footage to cloud servers.
 
-Wireless Monitoring
+## Hardware Components
 
-Provides remote monitoring without requiring wired surveillance infrastructure.
+- ESP32-CAM Module
+- PIR Motion Sensor
+- USB-to-TTL Converter (FTDI/CP2102)
+- LED Indicator
+- Buzzer
+- Jumper Wires
+- 5V Power Supply
 
-Privacy-Focused Design
+## Software Requirements
 
-Local processing ensures better protection of surveillance data.
+- Arduino IDE
+- ESP32 Board Package
+- ESP32-CAM Libraries
+- Embedded C/C++
 
-🛠 Hardware Components
-ESP32-CAM Module
+## System Architecture
+
 PIR Motion Sensor
-USB-to-TTL Converter (FTDI / CP2102)
-LED Indicator
-Buzzer
-Jumper Wires
-5V Power Supply / Power Bank
-💻 Software & Tools
-Arduino IDE
-ESP32 Board Package
-ESP32-CAM Libraries
-Embedded C/C++
-Wi-Fi Communication Protocols
-⚙️ System Architecture
-PIR Motion Sensor
-        │
-        ▼
-   ESP32-CAM
-        │
-        ▼
- Image Capture
-        │
-        ▼
+        ↓
+     ESP32-CAM
+        ↓
+   Image Capture
+        ↓
  Local Processing
  (Edge Computing)
-        │
-        ▼
- Decision Logic
-        │
- ┌──────┴──────┐
- ▼             ▼
+        ↓
+   Decision Logic
+        ↓
+ ┌───────────────┐
+ ↓               ↓
 LED/Buzzer   Wi-Fi Alert
-                │
-                ▼
-             User
+                  ↓
+                User
 
-This architecture enables real-time monitoring while minimizing unnecessary network traffic and cloud processing requirements.
+## Working Principle
 
-🔄 Working Principle
-ESP32-CAM initializes and connects to the configured Wi-Fi network.
-PIR sensor continuously monitors the surroundings.
-Motion detection triggers a signal to the ESP32-CAM.
-Camera captures an image automatically.
-Captured data is processed locally on the device.
-Alert notifications and images are transmitted to the user.
-The system returns to monitoring mode and waits for the next event.
-🚀 Advantages
-Low-cost surveillance solution
-Compact and lightweight design
-Wireless remote monitoring
-Reduced cloud dependency
-Low power consumption
-Real-time event notifications
-Enhanced data privacy
-Easy IoT integration
-Scalable for larger deployments
-🌍 Applications
-Home Security Systems
-Office Monitoring
-Restricted Area Surveillance
-Banking and ATM Security
-Theft Prevention in Shops
-Smart Doorbell Systems
-Vehicle Parking Monitoring
-Industrial Hazard Zone Monitoring
-Smart Attendance Systems with Face Detection
-🔮 Future Enhancements
-Advanced Face Recognition
-Unknown Person Detection
-Cloud Backup Integration
-Mobile Application Support
-AI-Based Object Detection
-Multi-Camera Monitoring Network
-Smart Analytics Dashboard
+1. ESP32-CAM initializes and connects to the Wi-Fi network.
+2. PIR sensor continuously monitors surrounding movement.
+3. Motion detection triggers the ESP32-CAM.
+4. Camera captures an image automatically.
+5. Image is processed locally on the device.
+6. Alert notification and image are sent to the user.
+7. System returns to monitoring mode.
+
+## Advantages
+
+- Low-cost implementation
+- Compact design
+- Wireless connectivity
+- Low power consumption
+- Real-time monitoring
+- Reduced cloud dependency
+- Improved privacy and security
+- Easy integration with IoT platforms
+- Scalable architecture
+
+## Applications
+
+- Home Security Systems
+- Office Surveillance
+- Restricted Area Monitoring
+- Banking and ATM Security
+- Theft Prevention
+- Smart Doorbell Systems
+- Vehicle Parking Monitoring
+- Industrial Safety Monitoring
+- Smart Attendance Systems
+
+## Future Enhancements
+
+- Face Recognition
+- Unknown Person Detection
+- Mobile Application Integration
+- Cloud Backup Support
+- AI-Based Object Detection
+- Multi-Camera Surveillance Network
+
+## License
+
+This project is developed for educational and academic purposes.
+
